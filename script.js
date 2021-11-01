@@ -25,7 +25,7 @@ function toggleNav() {
         //overlay.classList.add("overlay-slide-right")
         overlay.classList.replace("overlay-slide-left","overlay-slide-right")
         // aNIMATE in - Nav Items
-        navAnimation("in", "out");
+        navAnimation("out", "in");
        // nav1.classList.remove("slide-out-1")
         //nav1.classList.add("slide-in-1")
        // nav2.classList.remove("slide-out-2")
@@ -60,9 +60,11 @@ function toggleNav() {
 
 // Even Lisenters 
 menuBars.addEventListener("click", toggleNav);
-nav1.addEventListener("click", toggleNav);
-nav2.addEventListener("click", toggleNav);
-nav3.addEventListener("click", toggleNav);
-nav4.addEventListener("click", toggleNav);
-nav5.addEventListener("click", toggleNav);
-
+navItems.forEach((nav) => {
+    nav.addEventListener("click",toggleNav);
+})
+//nav1.addEventListener("click", toggleNav);
+//nav2.addEventListener("click", toggleNav);
+//nav3.addEventListener("click", toggleNav);
+//nav4.addEventListener("click", toggleNav);
+///nav5.addEventListener("click", toggleNav);
